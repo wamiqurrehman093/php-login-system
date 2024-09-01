@@ -1,0 +1,45 @@
+html, body
+{
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: monospace;
+    font-size: larger;
+}
+
+.header
+{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr auto;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.heading
+{
+    margin: 0px 8px;
+    margin-right: 16px;
+}
+
+.login-form, .register-div
+{
+    justify-self: end;
+    align-self: center;
+    margin-right: 8px;
+}
+
+h1 {
+    font-weight: lighter;
+}
+
+input {
+    font-size: large;
+}
+
+button {
+    border-width: 1px;
+    font-size: large;
+    padding: 3px 32px;
+    border-radius: 4px;
+}
