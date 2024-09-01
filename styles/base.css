@@ -11,7 +11,7 @@ html, body
 {
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr 1fr auto;
+    grid-template-columns: auto 1fr auto;
     border-bottom-width: 1px;
     border-bottom-style: solid;
 }
@@ -22,7 +22,7 @@ html, body
     margin-right: 16px;
 }
 
-.login-form, .register-div
+.login-form, .registeration-form, .register-div, .login-div
 {
     justify-self: end;
     align-self: center;
