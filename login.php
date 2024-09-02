@@ -1,7 +1,7 @@
 <?php
-    // Allow the config
-    define('__CONFIG__', true);
-    require_once "include/config.php";
+// Allow the config
+define('__CONFIG__', true);
+require_once "include/config.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,6 +28,7 @@
             <a href="/register.php"><button name="register">Register</button></a>
         </div>
     </div>
+    <p class="js-error"></p>
     <?php require_once 'include/footer.php' ?>
 </body>
 
