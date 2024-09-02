@@ -7,12 +7,10 @@
         header('Content-Type: application/json');
         $return = [];
         $email = Filter::String($_POST['email']);
-        $findUser = $con->prepare("SELECT user_id FROM users WHERE email = LOWER(:email) LIMIT 1");
-        $findUser->bindParam(':email', $email, PDO::PARAM_STR);
-        $findUser->execute();
-        if ($findUser->rowCount() == 1)
+        $user_found = FindUser($con, $email);
+        if ($user_found)
         {
-            $return['error'] = "You already have an account.";
+            $return['error'] = "You already have an account. <a href='/login.php'><button>Log In</button></a>";
             $return['is_logged_in'] = false;
         }
         else
