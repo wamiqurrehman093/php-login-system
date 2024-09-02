@@ -2,7 +2,7 @@
     // Allow the config
     define('__CONFIG__', true);
     require_once "include/config.php";
-    ForceDashboard();
+    Page::ForceDashboard();
 ?>
 <!DOCTYPE html>
 <html>
