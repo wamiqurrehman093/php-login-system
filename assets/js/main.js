@@ -2,10 +2,12 @@ $(document)
 .on("submit", "form.js-register", function(event){
         event.preventDefault();
         var _form = $(this);
+        var _error = $('.js-error');
         var dataObj = {
             email: $("input[type='email']", _form).val(),
             password: $("input[type='password']", _form).val()
         }
+        _error.hide()
         $.ajax({
             type: 'POST',
             url: '/ajax/register.php',
@@ -14,18 +16,18 @@ $(document)
             async: true
         })
         .done(function ajaxDone(data){
-            console.log(data);
             if (data.redirect !== undefined)
             {
                 window.location = data.redirect;
             }
-            alert(data.name);
+            else if (data.error !== undefined)
+            {
+                _error.text(data.error).show();
+            }
         })
         .fail(function ajaxFailed(e){
-            console.log(e);
         })
         .always(function ajaxAlwaysDoThis(data){
-            console.log('Always');
         });
         return false;
     }
