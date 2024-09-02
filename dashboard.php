@@ -1,9 +1,8 @@
 <?php
-    // Allow the config
-    define('__CONFIG__', true);
-    require_once "include/config.php";
-    echo $_SESSION['user_id'] . ' is your user id';
-    exit;
+// Allow the config
+define('__CONFIG__', true);
+require_once "include/config.php";
+ForceLogin();
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,8 +14,15 @@
 
 <body>
     <div class="header light-mode">
-        <a href="/"><h1 class="heading">Php Login System</h1></a>
-        <a href="/"><h2 class="heading">Dashboard</h2></a>
+        <a href="/dashboard.php">
+            <h1 class="heading">Dashboard</h1>
+        </a>
+        <div class="login-div">
+            <p>You're logged in in as user: <?php echo $_SESSION['user_id'] ?></p>
+        </div>
+        <div class="logout-div">
+            <a href="/logout.php"><button name="logout">Logout</button></a>
+        </div>
     </div>
     <?php require_once 'include/footer.php' ?>
 </body>

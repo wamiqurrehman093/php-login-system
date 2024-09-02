@@ -22,7 +22,7 @@ html, body
     margin-right: 16px;
 }
 
-.login-form, .registeration-form, .register-div, .login-div
+.login-form, .registeration-form, .register-div, .login-div, .logout-div
 {
     justify-self: end;
     align-self: center;
@@ -42,6 +42,11 @@ button {
     font-size: large;
     padding: 3px 32px;
     border-radius: 4px;
+}
+
+p
+{
+    margin: 0px;
 }
 
 .js-error
