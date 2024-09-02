@@ -22,7 +22,7 @@ $(document)
             }
             else if (data.error !== undefined)
             {
-                _error.text(data.error).show();
+                _error.html(data.error).show();
             }
         })
         .fail(function ajaxFailed(e){
@@ -55,7 +55,8 @@ $(document)
             }
             else if (data.error !== undefined)
             {
-                _error.text(data.error).show();
+                _error.html(data.error).show();
+                console.log(data.error);
             }
         })
         .fail(function ajaxFailed(e){

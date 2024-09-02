@@ -28,7 +28,7 @@
             <a href="/login.php"><button name="login">Log In</button></a>
         </div>
     </div>
-    <p class="js-error"></p>
+    <div class="js-error"></div>
     <?php require_once 'include/footer.php' ?>
 </body>
 

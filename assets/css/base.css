@@ -47,4 +47,5 @@ button {
 .js-error
 {
     display: none;
+    margin: 8px;
 }

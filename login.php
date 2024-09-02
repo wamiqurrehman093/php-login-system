@@ -28,7 +28,7 @@ require_once "include/config.php";
             <a href="/register.php"><button name="register">Register</button></a>
         </div>
     </div>
-    <p class="js-error"></p>
+    <div class="js-error"></div>
     <?php require_once 'include/footer.php' ?>
 </body>
 
